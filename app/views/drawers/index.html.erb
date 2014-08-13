@@ -1,0 +1,29 @@
+<h1>Listing drawers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Drawertitle</th>
+      <th>Targetamount</th>
+      <th>Targetdate</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @drawers.each do |drawer| %>
+      <tr>
+        <td><%= drawer.DrawerTitle %></td>
+        <td><%= drawer.TargetAmount %></td>
+        <td><%= drawer.TargetDate %></td>
+        <td><%= link_to 'Show', drawer %></td>
+        <td><%= link_to 'Edit', edit_drawer_path(drawer) %></td>
+        <td><%= link_to 'Destroy', drawer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Drawer', new_drawer_path %>

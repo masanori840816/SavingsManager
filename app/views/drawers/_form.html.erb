@@ -1,0 +1,29 @@
+<%= form_for(@drawer) do |f| %>
+  <% if @drawer.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@drawer.errors.count, "error") %> prohibited this drawer from being saved:</h2>
+
+      <ul>
+      <% @drawer.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :DrawerTitle %><br>
+    <%= f.text_field :DrawerTitle %>
+  </div>
+  <div class="field">
+    <%= f.label :TargetAmount %><br>
+    <%= f.number_field :TargetAmount %>
+  </div>
+  <div class="field">
+    <%= f.label :TargetDate %><br>
+    <%= f.date_select :TargetDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

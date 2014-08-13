@@ -1,0 +1,29 @@
+<%= form_for(@saving) do |f| %>
+  <% if @saving.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@saving.errors.count, "error") %> prohibited this saving from being saved:</h2>
+
+      <ul>
+      <% @saving.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :DrawerID %><br>
+    <%= f.text_field :DrawerID %>
+  </div>
+  <div class="field">
+    <%= f.label :AddedSaving %><br>
+    <%= f.number_field :AddedSaving %>
+  </div>
+  <div class="field">
+    <%= f.label :AddedDate %><br>
+    <%= f.date_select :AddedDate %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

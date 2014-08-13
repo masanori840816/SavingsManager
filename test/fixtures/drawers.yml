@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  DrawerTitle: MyString
+  TargetAmount: 1
+  TargetDate: 2014-08-11
+
+two:
+  DrawerTitle: MyString
+  TargetAmount: 1
+  TargetDate: 2014-08-11

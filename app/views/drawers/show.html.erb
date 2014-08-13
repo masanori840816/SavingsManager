@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+<article id="show_drawer_box">
+  引き出し
+</article>
+<p>
+  <strong>Drawertitle:</strong>
+  <%= @drawer.DrawerTitle %>
+</p>
+
+<p>
+  <strong>Targetamount:</strong>
+  <%= @drawer.TargetAmount %>
+</p>
+
+<p>
+  <strong>Targetdate:</strong>
+  <%= @drawer.TargetDate %>
+</p>
+<article>
+  <%= link_to 'Add Saving', new_drawer_saving_path(@drawer) %>
+</article>
+<%= link_to 'Edit', edit_drawer_path(@drawer) %> |
+<%= link_to 'Back', drawers_path %>
